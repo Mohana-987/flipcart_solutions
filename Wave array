@@ -1,0 +1,13 @@
+WAVE ARRAY
+
+class Solution:
+    def convertToWave(self, arr, N):
+        # code here
+        if(N%2==0):
+            for i in range(0,N,2):
+                arr[i],arr[i+1]=arr[i+1],arr[i]
+            return arr
+        else:
+            for i in range(0,N-1,2):
+                arr[i],arr[i+1]=arr[i+1],arr[i]
+            return arr
